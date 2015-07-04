@@ -13,7 +13,7 @@ void salt(cv::Mat image, int n){
 		i = rand()%image.cols;
 		j = rand()%image.rows;
 		
-		if (image.type() == CV_8UC1) { // gray-level image
+		if (image.type() == CV_8UC1) { // gray-level image 
 			image.at<uchar>(j,i) = 255;		
 			
 		}
@@ -27,12 +27,10 @@ void salt(cv::Mat image, int n){
 }
 
 int main (int argc, char** argv){
-		cv::Mat image = cv::imread("/home/bernard/pics/6.jpg");
-		salt(image, 3000); 	//function to add nois)
+		cv::Mat image = cv::imread("/home/bernard/pics/6.jpg", CV_LOAD_IMAGE_COLOR);
+		salt(image, 3000); 	//function to add noise)
 		
 		cv::namedWindow("Image");
 		cv::imshow("Image", image);
 		cv::waitKey(0);
-
-
 }
