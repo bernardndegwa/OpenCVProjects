@@ -59,7 +59,7 @@ int main(int argc, char** argv){
 	cv::Mat image= cv::imread("/home/bernard/pics/6.jpg"); //read the image
 	colorReduce(image,64);	//process the image
 	cv::namedWindow("Image");
-	cv::imshow("Image", image);		//display the image
+	cv::imshow("Image", image);		//display the image+12163083175
 	cv::waitKey(0);
 }
 
