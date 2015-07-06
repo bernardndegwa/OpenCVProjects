@@ -15,14 +15,19 @@ int main()
 		return 0; 
 
     // 3. Set input parameters
-	cdetect.setTargetColor(230,190,130); // here blue sky
+	cdetect.setTargetColor(0,0,0); // here black
 
+	//Display the image that the color detector will use.
+	cv::namedWindow("Image");
+	cv::imshow("Image", image);
+	
+	
    // 4. Process the image and display the result
 	cv::namedWindow("result");
 	cv::imshow("result",cdetect.process(image));
 
 	// or using functor
-	ColorDetector colordetector(230, 190, 130,  // color
+	ColorDetector colordetector(0, 0, 0,  // color
 		                             45, true); // Lab threshold
 	cv::namedWindow("result (functor)");
 	cv::imshow("result (functor)",colordetector(image));
