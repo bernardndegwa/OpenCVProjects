@@ -9,10 +9,10 @@ using namespace std;
 int main()
 {
 	// Read input image
-	cv::Mat image= cv::imread("/home/bernard/pics/6.jpg",0);
+	cv::Mat image= cv::imread("/home/bernard/pics/6.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 	if (!image.data)
 		return 0; 
-	// Resize by 70% for book printing
+	// Resize by 70% 
 	cv::resize(image, image, cv::Size(), 0.7, 0.7);
 
 	// save grayscale image

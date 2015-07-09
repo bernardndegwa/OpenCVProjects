@@ -122,6 +122,9 @@ int main()
 
 	// read the image
 	image= cv::imread("/home/bernard/pics/E5.jpg");
+	// Resize by 70% 
+	cv::resize(image, image, cv::Size(), 0.5, 0.3);
+	
 	if (!image.data)
 		return 0; 
 
